@@ -99,12 +99,15 @@ body{
 #main-desc-container{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 3rem;
 }
 
-/* #main-des{
+#main-des{
     text-align: justify;
-} */
+    font-size: 1.5rem;
+} 
 
 #main-btn{
     padding: 1rem;
