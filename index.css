@@ -84,16 +84,20 @@ body{
 #main-container{
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 90%;
     justify-content: center;
     gap: 1rem;
     padding: 0 4rem;
+    background-attachment: fixed;
+    background-image: url(img/Img1.png);
+    margin: 4rem;
+    border-radius: 3rem;
 }
 
 #main-title{
     text-align: center;
     font-size: 3rem;
-    color: #404040;
+    color: #f0f0f0;
 }
 
 #main-desc-container{
@@ -107,6 +111,7 @@ body{
 #main-des{
     text-align: justify;
     font-size: 1.5rem;
+    color: #f0f0f0;
 } 
 
 #main-btn{
@@ -114,8 +119,8 @@ body{
     width: 60%;
     margin: 0 auto;
     border-radius: 0.5rem;
-    background-color: #0c7e7e;
-    color: white;
+    background-color: #e8e8e8;
+    color: black;
     font-weight: 700;
     font-size: 1rem;
     cursor: pointer;
@@ -125,7 +130,7 @@ body{
 }
 
 #main-btn:hover{
-    background-color: #0c7e7ec1;
+    background-color: #ffffffc1;
 }
 
 /* lista */
