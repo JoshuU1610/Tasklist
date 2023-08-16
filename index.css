@@ -89,8 +89,8 @@ body{
     gap: 1rem;
     padding: 0 4rem;
     background-attachment: fixed;
-    background-image: url(img/Img1.png);
-    margin: 4rem;
+    background-image: url(img/Img1.jpg);
+    margin: 1.5rem;
     border-radius: 3rem;
 }
 
@@ -292,6 +292,8 @@ body{
     
     #main-container{
         padding: 0 1rem;
+        margin: 4rem;
+        background-image: url(img/Img2.jpg);
     }
 
     #main-container2{
