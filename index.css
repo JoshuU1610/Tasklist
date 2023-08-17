@@ -24,7 +24,7 @@ body{
 /* nav */
 /* el id tiene prioridad sobre la class */
 #nav-bar{
-    background-color: #0c7e7e;
+    background-color: #0c7e7e00;
     height: 5rem;
     position: fixed;
     top: 0;
@@ -32,9 +32,9 @@ body{
     right: 0;
     padding: 0 1rem;
     color: aliceblue;
-    -webkit-box-shadow: 0px 7px 25px 1px rgba(158,155,158,1);
+    /* -webkit-box-shadow: 0px 7px 25px 1px rgba(158,155,158,1);
     -moz-box-shadow: 0px 7px 25px 1px rgba(158,155,158,1);
-    box-shadow: 0px 7px 25px 1px rgba(158,155,158,1);
+    box-shadow: 0px 7px 25px 1px rgba(158,155,158,1); */
     z-index: 10;
 }
 
@@ -53,11 +53,12 @@ body{
 }
 
 #nav-icon{
-    border: 1px solid white;
+    border: 1px solid #000000;
     padding: 0.5rem;
     width: 3rem;
     height: 3rem;
     border-radius: 0.5rem;
+    color: #000000;
 }
 
 #nav-icon:active {
@@ -70,26 +71,28 @@ body{
 }
 
 .nav-link{
-    color: #e7e5e4;
+    color: #0b0b0b;
     text-decoration: none;
     padding: 1rem;
 }
 
 .nav-link:hover{
-    border-bottom: 1px solid #e7e5e4;
+    border-bottom: 1px solid #222222;
     padding-bottom: 1rem;
+    transition: all 01s ease;
 }
 
 /* Main */
 #main-container{
     display: flex;
-    flex-direction: column;
-    height: 90%;
+    flex-direction: row;
+    height: 80%;
     justify-content: center;
+    align-items: center;
     gap: 1rem;
     padding: 0 4rem;
     background-attachment: fixed;
-    background-image: url(img/Img2.jpg);
+    background-color: #59a68c;
     margin: 1.5rem;
     border-radius: 3rem;
 }
@@ -293,7 +296,6 @@ body{
     #main-container{
         padding: 0 1rem;
         margin: 4rem;
-        background-image: url(img/Img2.jpg);
     }
 
     #main-container2{
