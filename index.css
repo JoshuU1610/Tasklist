@@ -85,13 +85,11 @@ body{
 /* Main */
 #main-container{
     display: flex;
-    flex-direction: row;
-    height: 80%;
     justify-content: center;
     align-items: center;
+    height: 80%;
     gap: 1rem;
     padding: 0 4rem;
-    background-attachment: fixed;
     background-color: #59a68c;
     margin: 1.5rem;
     border-radius: 3rem;
@@ -136,6 +134,8 @@ body{
     background-color: #ffffffc1;
 }
 
+
+
 /* lista */
 
 #main-container2{
@@ -164,7 +164,7 @@ body{
     height: 2.5rem;
     padding: 13px 20px;
     border: 2px solid #1D2820;
-    border-radius: 4rem;
+    border-radius: 2rem;
     box-shadow: none;
     background-color: #ffffffb9;
     width: 100%;
@@ -176,18 +176,25 @@ body{
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
-    font-size: 18px;
     margin-bottom: 0;
     display: inline-block;
     padding: 1rem;
     -webkit-border-radius: 5px;
-    border-radius: 5px;
+    border-radius: 2rem;
     top: -1px;
     color: #fff;
     background-color: #0c7e7e;
     cursor: pointer;
-    border-radius: 4rem;
-    width: 50%;
+    border-radius: 2rem;
+    width: 30%;
+}
+
+#main-add{
+    color: #e5e7eb;
+    width: 2rem;
+    height: 2rem;
+    margin: 0;
+    padding: 0;
 }
 
 #main-button-agg:active{
@@ -284,6 +291,21 @@ body{
     text-align: justify;
 }
 
+@media (min-width: 768px){
+    #list-text{
+        width: 50%;
+        margin: 0;
+        height: 3rem;
+        border-radius: 1rem;
+    }
+
+    #main-button-agg{
+        padding: 1rem 3rem;
+        width: 40%;
+        border-radius: 1rem;
+    }
+}
+
 @media (min-width: 1024px){
     #nav-icon{
         display: none;
@@ -330,7 +352,7 @@ body{
     }
 
     #main-btn{
-        width: 25%;
+        width: 30%;
     }
 
     #main-title{
@@ -338,13 +360,25 @@ body{
     }
 
     #main-button-agg{
-        padding: 1rem 3rem;
+        padding: 0.7rem 1rem;
         width: 10%;
         border-radius: 1rem;
     }
 }
 
 @media (min-width: 1500px) {
+    #item{
+        width: calc(30% - 1rem);
+
+    }
+}
+
+@media (min-width: 2048px) {
+    #main-container{
+        width: 70%;
+        margin: 2rem auto;
+    }
+
     #item{
         width: calc(30% - 1rem);
 
