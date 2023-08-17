@@ -227,7 +227,6 @@ body{
 }
 
 #item{
-    padding: 26px;
     display: flex;
     align-items: center;
     line-height: 1.5;
@@ -239,11 +238,13 @@ body{
     box-shadow: 3px 3px 10px rgba(0,0,0,.05);
     gap: 2rem;
     width: 100%;
+    height: auto;
 }
 
 #item-delete{
     color: white;
     width: 20%;
+    height: 100%;
     height: 4rem;
     cursor: pointer;
     background-color: rgb(255, 0, 0);
@@ -290,16 +291,16 @@ body{
 
 @media (min-width: 768px){
     #list-text{
-        width: 50%;
+        width: 60%;
         margin: 0;
         height: 3rem;
-        border-radius: 1rem;
+        border-radius: 1rem 0rem 0rem 1rem;
     }
 
     #main-button-agg{
         padding: 1rem 3rem;
-        width: 40%;
-        border-radius: 1rem;
+        width: 20%;
+        border-radius: 0rem 1rem 1rem 0rem;
     }
 }
 
@@ -339,7 +340,8 @@ body{
         width: 50%;
         margin: 0;
         height: 3rem;
-        border-radius: 1rem;
+        border-radius: 1rem 0rem 0rem 1rem;
+        padding: 0.5rem;
         
     }
 
@@ -357,9 +359,9 @@ body{
     }
 
     #main-button-agg{
-        padding: 0.7rem 1rem;
+        padding: 0.5rem 1rem;
         width: 10%;
-        border-radius: 1rem;
+        border-radius: 0rem 1rem 1rem 0rem;
     }
 }
 
