@@ -378,8 +378,19 @@ body{
         margin: 2rem auto;
     }
 
+    #main-tasklist{
+        margin: 1rem 10rem;
+    }
+
     #item{
         width: calc(30% - 1rem);
+    }
 
+    #list-text{
+        width: 30%;
+    }
+
+    #main-button-agg{
+        width: 5%;
     }
 }
