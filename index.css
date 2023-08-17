@@ -162,7 +162,7 @@ body{
     display: inline-block;
     font-size: 18px;
     height: 2.5rem;
-    padding: 1.93rem;
+    padding: 1.2rem;
     border: 2px solid #1D2820;
     border-radius: 2rem 0rem 0rem 2rem;
     box-shadow: none;
@@ -178,7 +178,7 @@ body{
     margin-right: 0;
     margin-bottom: 0;
     display: inline-block;
-    padding: 1rem;
+    padding: 0.29rem;
     -webkit-border-radius: 5px;
     top: -1px;
     color: #fff;
@@ -298,7 +298,7 @@ body{
     }
 
     #main-button-agg{
-        padding: 1rem 3rem;
+        padding: 0.49rem 3rem;
         width: 20%;
         border-radius: 0rem 1rem 1rem 0rem;
     }
