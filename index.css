@@ -182,7 +182,7 @@ body{
     -webkit-border-radius: 5px;
     top: -1px;
     color: #fff;
-    background-color: #0c7e7e;
+    background-color: #59a68c;
     cursor: pointer;
     border-radius: 0rem 2rem 2rem 0rem;
     width: 30%;
@@ -197,11 +197,11 @@ body{
 }
 
 #main-button-agg:active{
-    background-color: #0c7e7ecf;
+    background-color: #437b69;
 }
 
 #main-button-agg:hover{
-    background-color: #0c7e7ecf;
+    background-color: #437b69;
 }
 
 #main-head{
@@ -342,7 +342,6 @@ body{
         height: 3rem;
         border-radius: 1rem 0rem 0rem 1rem;
         padding: 0.9rem;
-        
     }
 
     #item{
