@@ -162,7 +162,7 @@ body{
     display: inline-block;
     font-size: 18px;
     height: 2.5rem;
-    padding: 1.2rem;
+    padding: 1.11rem;
     border: 2px solid #1D2820;
     border-radius: 2rem 0rem 0rem 2rem;
     box-shadow: none;
@@ -178,7 +178,7 @@ body{
     margin-right: 0;
     margin-bottom: 0;
     display: inline-block;
-    padding: 0.29rem;
+    padding: 0.2rem;
     -webkit-border-radius: 5px;
     top: -1px;
     color: #fff;
@@ -341,7 +341,7 @@ body{
         margin: 0;
         height: 3rem;
         border-radius: 1rem 0rem 0rem 1rem;
-        padding: 0.5rem;
+        padding: 0.9rem;
         
     }
 
