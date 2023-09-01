@@ -196,16 +196,16 @@ body{
 }
 
 #list-text{
-    float: none;
-    display: inline-block;
-    font-size: 18px;
-    height: 2.5rem;
-    padding: 1.11rem;
-    border: 2px solid #1D2820;
-    border-radius: 2rem 0rem 0rem 2rem;
-    box-shadow: none;
-    background-color: #ffffffb9;
-    width: 80%;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: #cacaca00;
+    border-radius: 5px;
+    /* outline: none; */
+    color: black;
+    font-size: 1rem;
+    transition: 0.5s;
+    background-color: #ffffff;
 }
 
 #main-button-agg{
@@ -336,6 +336,19 @@ body{
     text-align: justify;
 }
 
+.input-task{
+    width: 60%;
+    text-align: justify;
+    background-color: transparent;
+    color: black;
+    text-align: center;
+    justify-content: center;
+    padding: 1rem;
+    cursor: auto;
+    border: none;
+    font-size: 1.2rem;
+}
+
 @media (min-width: 768px){
     #main-container{
         flex-direction: column-reverse;
@@ -348,9 +361,6 @@ body{
 
     #list-text{
         width: 60%;
-        margin: 0;
-        height: 3rem;
-        border-radius: 1rem 0rem 0rem 1rem;
     }
 
     #main-button-agg{
@@ -361,6 +371,14 @@ body{
 
     .img{
         display: flex;
+    }
+
+    #item{
+        flex-direction: row;
+    }
+
+    .buttons{
+        width: 40%;
     }
 }
 
@@ -401,10 +419,6 @@ body{
 
     #list-text{
         width: 50%;
-        margin: 0;
-        height: 3rem;
-        border-radius: 1rem 0rem 0rem 1rem;
-        padding: 0.9rem;
     }
 
     #item{
