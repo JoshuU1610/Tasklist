@@ -25,7 +25,7 @@ body{
 /* nav */
 /* el id tiene prioridad sobre la class */
 #nav-bar{
-    background-color: #6bb39b;
+    background-color: transparent;
     height: 5rem;
     position: fixed;
     top: 0;
@@ -110,7 +110,6 @@ body{
     width: 50%;
     font-family: 'PT Sans Narrow', sans-serif;
     font-family: 'Rajdhani', sans-serif;
-    padding: 3rem;
     gap: 3rem;
 }
 
@@ -333,6 +332,7 @@ body{
 
     #main-cont{
         width: 70%;
+        padding: 3rem;
     }
 
     #list-text{
@@ -367,6 +367,7 @@ body{
         padding: 0 1rem;
         justify-content: center;
         align-items: center;
+        flex-direction: row;
     }
 
     #main-container2{
