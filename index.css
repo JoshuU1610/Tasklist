@@ -323,6 +323,7 @@ body{
     gap: 2rem;
     width: 100%;
     height: auto;
+    transition: 500ms ease;
 }
 
 .buttons{
@@ -341,16 +342,11 @@ body{
     background-color: #fc325b;
     border-radius: 1rem;
     padding: 0.5rem;
-}
-
-.item-delete:active{
-    background-color: transparent;
-    color: #fc325b;
+    transition: 600ms;
 }
 
 .item-delete:hover{
-    background-color: transparent;
-    color: #fc325b;
+    width: 40%;
     transition: 600ms;
 }
 
@@ -362,16 +358,11 @@ body{
     color: white;
     border-radius: 1rem;
     padding: 0.5rem;
-}
-
-.item-check:active{
-    background-color: transparent;
-    color: #62a07b;
+    transition: 600ms;
 }
 
 .item-check:hover{
-    background-color: transparent;
-    color: #62a07b;
+    width: 40%;
     transition: 600ms;
 }
 
@@ -400,10 +391,11 @@ body{
 }
 
 .success {
-    background-color: #59a68c;
+    background-color: #429867;
     color: white;
     transition: 500ms ease;
 }
+
 @media (min-width: 768px){
     #main-container{
         flex-direction: column-reverse;

@@ -4,7 +4,7 @@ const buttonAgg = document.querySelector('#main-button-agg');
 const buttonFilter = document.querySelector('.button-filter');
 const form = document.querySelector('#main-head');
 
-const regex = /^(?!.*\s{2,})[\s\S]{1,280}[^ ]$/;
+const regex = /^(?!.*\s{2,})[A-Za-zÁÉÍÓÚÜÑáéíóúüñ][A-Za-zÁÉÍÓÚÜÑáéíóúüñ\s]{0,279}(?!\s)$/;
 
 
 
