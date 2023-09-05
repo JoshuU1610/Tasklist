@@ -4,12 +4,18 @@ const buttonAgg = document.querySelector('#main-button-agg');
 const buttonFilter = document.querySelector('.button-filter');
 const form = document.querySelector('#main-head');
 
+const regex = /^(?!.*\s{2,})[\s\S]{1,280}[^ ]$/;
+
+
+
 window.addEventListener('scroll', e  => {
     navBar.classList.toggle('solid', window.scrollY > 0);
 })
 
 taskInput.addEventListener('input', e => {
-    if(!taskInput.value){
+    const validation = regex.test(taskInput.value);
+    
+    if(!validation){
         buttonAgg.disabled = true;
     } else {
         buttonAgg.disabled = false
