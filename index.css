@@ -224,7 +224,7 @@ body{
     -webkit-border-radius: 5px;
     top: -1px;
     color: #fff;
-    background-color: #59a68c;
+    background-color:  darkslategrey;
     cursor: pointer;
     border: 1px solid white;
     border-radius: 1rem;
@@ -233,7 +233,7 @@ body{
 }
 
 #main-button-agg:disabled{
-    background-color: darkslategrey;
+    background-color: #59a68c;
     transition: 500ms ease all;
 }
 
@@ -276,8 +276,8 @@ body{
     padding: 1rem;
 }
 
-.button-filter:disabled{
-    background: transparent;
+.button-filter{
+    background: white;
     border: 1px solid white;
     border-radius: 2rem;
     padding: 1rem;
@@ -285,18 +285,15 @@ body{
     font-size: 0.7rem;
     pointer-events: visible;
     margin-left: 1rem;
-    color: white;
+    color: black;
     cursor: pointer;
 }
 
-.button-filter{
-    background: white;
-    border-radius: 2rem;
-    padding: 1rem;
-    text-transform: uppercase;
-    font-size: 0.7rem;
-    margin-left: 1rem;
-    color: black;
+.button-filter:hover{
+    -webkit-box-shadow: 0px -1px 19px -3px rgba(255,255,255,1);
+    -moz-box-shadow: 0px -1px 19px -3px rgba(255,255,255,1);
+    box-shadow: 0px -1px 19px -3px rgba(255,255,255,1);
+    transition: 500ms ease;
 }
 
 #myUL{
@@ -391,6 +388,19 @@ body{
 }
 
 .success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5;
+    text-align: center;
+    border-radius: 10px 25px 0;
+    border-radius: 10px;
+    padding: 26px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,.05);
+    gap: 2rem;
+    width: 100%;
+    height: auto;
+    transition: 500ms ease;
     background-color: #429867;
     color: white;
     transition: 500ms ease;
@@ -421,6 +431,10 @@ body{
     }
 
     .item{
+        flex-direction: row;
+    }
+
+    .success{
         flex-direction: row;
     }
 
@@ -472,6 +486,10 @@ body{
         width: calc(50% - 1rem);
     }
 
+    .success{
+        width: calc(50% - 1rem);
+    }
+
     #main-title{
         font-size: 3rem;
     }
@@ -488,6 +506,28 @@ body{
         width: calc(30% - 1rem);
 
     }
+
+    .success{
+        width: calc(30% - 1rem);
+
+    }
+
+    .item-check{
+        width: 40%;
+    }
+
+    .item-check:hover{
+        width: 50%;
+    }
+
+    .item-delete{
+        width: 40%;
+    }
+
+    .item-delete:hover{
+        width: 50%;
+    }
+    
 }
 
 @media (min-width: 2048px) {
@@ -504,6 +544,10 @@ body{
         width: calc(30% - 1rem);
     }
 
+    .success{
+        width: calc(30% - 1rem);
+    }
+
     #list-text{
         width: 30%;
     }
@@ -511,4 +555,6 @@ body{
     #main-button-agg{
         width: 5%;
     }
+
+    
 }
