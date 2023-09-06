@@ -93,11 +93,17 @@ myUL.addEventListener('click', e => {
 
 })
 
-ButtonSuccess.addEventListener('click', () => show('success','item'));
-ButtonIncomplete.addEventListener('click', () => show('item','success'));
+ButtonSuccess.addEventListener('click', () => {
+    show('success','item');
+});
+
+ButtonIncomplete.addEventListener('click', () => {
+    show('item','success');
+});
+
 ButtonAll.addEventListener('click', () => {
     show('item','item'); 
-    show('success','success')
+    show('success','success');
 });
 
 window.onload = () => {
