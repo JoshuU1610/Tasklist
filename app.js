@@ -5,7 +5,9 @@ const form = document.querySelector('#main-head');
 const ButtonAll = document.getElementById('filter-all');
 const ButtonSuccess = document.getElementById('filter-success');
 const ButtonIncomplete = document.getElementById('filter-incomplete');
-
+const buttonsFilter = document.getElementById('main-filter');
+let contSuccess = 0;
+let contIncompletes = 0;
 const regex = /^(?!.*\s{2,})[^ ][A-Za-zÁÉÍÓÚÜÑáéíóúüñ\s\d!@#$%^&*()-=_+{}\[\]|;:'",.<>\/?\\]{0,279}(?!\s)$/;
 
 const show = (clase1,clase2) => {
@@ -13,6 +15,23 @@ const show = (clase1,clase2) => {
     [...allTask].forEach(a => a.setAttribute('style', 'display: none'));
     let task = document.getElementsByClassName(clase1);
     [...task].forEach(a => a.setAttribute('style', 'display: flex'));
+}
+
+window.onload = () => {
+    myUL.innerHTML = localStorage.getItem('task');
+    buttonsFilter.innerHTML= localStorage.getItem('buttons');
+    contIncompletes = JSON.parse(localStorage.getItem('contIncompletes'));
+    if (contIncompletes === null) {
+        contIncompletes = 0;
+    }
+    contSuccess = JSON.parse(localStorage.getItem('contSuccess'));
+    if ( contSuccess === null) {
+         contSuccess = 0;
+    }
+
+      buttonsFilter.innerHTML = `<button id="filter-all" class="button-filter">todas</button>
+            <button id="filter-success" class="button-filter" >Hechas ${contSuccess}</button>
+            <button id="filter-incomplete" class="button-filter" >sin terminar ${contIncompletes}</button>`;
 }
 
 window.addEventListener('scroll', e  => {
@@ -50,10 +69,16 @@ form.addEventListener('submit', e => {
     </button>
         
     </div>`;
-    li.classList.add('item')
+    li.classList.add('item');
     myUL.append(li);
+    contIncompletes++;
+    buttonsFilter.innerHTML = `<button id="filter-all" class="button-filter">todas</button>
+    <button id="filter-success" class="button-filter" >Hechas ${contSuccess}</button>
+    <button id="filter-incomplete" class="button-filter" >sin terminar ${contIncompletes}</button>`;
     localStorage.setItem('task', myUL.innerHTML);
-    window.location.reload()
+    localStorage.setItem('buttons', buttonsFilter.innerHTML);
+    localStorage.setItem('contIncompletes', JSON.stringify(contIncompletes));
+    taskInput.value = '';
 })
 
 myUL.addEventListener('click', e => {
@@ -62,7 +87,21 @@ myUL.addEventListener('click', e => {
         
         e.target.closest('.item-delete').parentElement.parentElement.remove();
         localStorage.setItem('task', myUL.innerHTML);
-        
+        clase = e.target.closest('.item-delete').parentElement.parentElement.classList.contains('item');
+        console.log(clase);
+        if (clase) {
+            contIncompletes--;
+            console.log('a');
+        } else {
+            contSuccess--;
+            console.log('a2');
+        }
+        buttonsFilter.innerHTML = `<button id="filter-all" class="button-filter">todas</button>
+        <button id="filter-success" class="button-filter" >Hechas ${contSuccess}</button>
+        <button id="filter-incomplete" class="button-filter" >sin terminar ${contIncompletes}</button>`;
+        localStorage.setItem('buttons', buttonsFilter.innerHTML);
+        localStorage.setItem('contIncompletes', JSON.stringify(contIncompletes));
+        localStorage.setItem('contSuccess', JSON.stringify(contSuccess));
     }
     
     
@@ -78,6 +117,12 @@ myUL.addEventListener('click', e => {
             </svg>`;
 
             selec.classList.remove('item');
+            contIncompletes--;
+            contSuccess++;
+            buttonsFilter.innerHTML = `<button id="filter-all" class="button-filter">todas</button>
+            <button id="filter-success" class="button-filter" >Hechas ${contSuccess}</button>
+            <button id="filter-incomplete" class="button-filter" >sin terminar ${contIncompletes}</button>`;
+            
         } else {
             selec.classList.remove('success');
             
@@ -86,28 +131,30 @@ myUL.addEventListener('click', e => {
         </svg>`;
 
             selec.classList.add('item');
+            contIncompletes++;
+            contSuccess--;
+            buttonsFilter.innerHTML = `<button id="filter-all" class="button-filter">todas</button>
+            <button id="filter-success" class="button-filter" >Hechas ${contSuccess}</button>
+            <button id="filter-incomplete" class="button-filter" >sin terminar ${contIncompletes}</button>`;
         }
-
         localStorage.setItem('task', myUL.innerHTML);
+        localStorage.setItem('buttons', buttonsFilter.innerHTML);
+        localStorage.setItem('contIncompletes', JSON.stringify(contIncompletes));
+        localStorage.setItem('contSuccess', JSON.stringify(contSuccess));
     }
 
 })
 
-ButtonSuccess.addEventListener('click', () => {
-    show('success','item');
-});
-
-ButtonIncomplete.addEventListener('click', () => {
-    show('item','success');
-});
-
-ButtonAll.addEventListener('click', () => {
-    show('item','item'); 
-    show('success','success');
-});
-
-window.onload = () => {
-
-    myUL.innerHTML = localStorage.getItem('task');
-    
-}
+document.addEventListener('click', e => {
+    const target = e.target;
+  
+    // Verificar si el botón correspondiente fue clickeado
+    if (target.matches('#filter-success')) {
+      show('success', 'item');
+    } else if (target.matches('#filter-incomplete')) {
+      show('item', 'success');
+    } else if (target.matches('#filter-all')) {
+      show('item', 'item');
+      show('success', 'success');
+    }
+  });
